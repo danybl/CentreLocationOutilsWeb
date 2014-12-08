@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="OutilMate.Master.cs" Inherits="WebApp.Outil" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="//fonts.googleapis.com/css?family=Audiowide" rel="stylesheet" type="text/css"/>
+    <link href="~/Styles/OutilMate.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="contenuEntete" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .menu {}
+    </style>
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" />
+        <div class="entete">
+            <div class="titre">
+                <h1>
+                    OutilMate Location
+                </h1>
+            </div>
+            <div class="connexionSession">
+                <asp:LoginView ID="VueDeSession" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                        [ <a href="~/Compte/Connexion.aspx" ID="ConnexionClient" runat="server">Se connecter</a> ]
+                        [ <a href="~/Compte/Enregistrer.aspx" ID="Enregistrer" runat="server">S'inscrire</a> ]
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                         <span class="bold"><asp:LoginName ID="NomDeConnexion" runat="server" FormatString="Bienvenue {0}" /></span>
+                        [ <asp:LoginStatus ID="Connexion" runat="server" LogoutAction="Redirect" LogoutText="Se déconnecter" LogoutPageUrl="~/"/> ]
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </div>
+            <div class ="fondDeMenu">
+                <div class="menuDeNavigation">
+                    <asp:Menu ID="MenuDeNavigation" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/Commun/Accueil.aspx" Text="Accueil"/>
+                            <asp:MenuItem NavigateUrl="~/Outils.aspx" Text="Outils"/>
+                            <asp:MenuItem NavigateUrl="~/Panier.aspx" Text="Panier"/>
+                            <asp:MenuItem NavigateUrl="~/Commun/ContactezNous.aspx" Text="Contactez-nous"/>
+                            <asp:MenuItem NavigateUrl="~/Commun/AProposDeNous.aspx" Text="À propos de nous"/>
+                        </Items>
+                    </asp:Menu>
+                </div>
+            </div>
+        </div>
+        <div class="principal">
+            <asp:ContentPlaceHolder ID="contenuPrincipal" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="pied">
+        <p>&copy; <%=DateTime.Now.Year%>  OutiMate Location. Tous les droits sont réservés.</p>
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
+                <asp:Timer ID="Timer1" runat="server" Interval="1000"></asp:Timer>
+                <asp:Label ID="Label1" runat="server" Text="Label"><%=DateTime.Now%></asp:Label>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+    </div>
+    </form>
+</body>
+</html>

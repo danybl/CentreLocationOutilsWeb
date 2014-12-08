@@ -1,0 +1,275 @@
+﻿/* ### DEFAULTS ### */
+
+body   
+{
+    background:
+        radial-gradient(black 15%, transparent 16%) 0 0,
+        radial-gradient(black 15%, transparent 16%) 8px 8px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color:#282828;
+    background-size:16px 16px;
+    font-size: .80em;
+    font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Audiowide, Arial, Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+a:link, a:visited
+{
+    color: #034af3;
+}
+
+a:hover
+{
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active
+{
+    color: #034af3;
+}
+
+p
+{
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}
+
+/* ### TITRES ### */
+
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: #666666;
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+}
+
+h1
+{
+    color : white;
+	font-family: 'Audiowide';
+    font-weight : bold;
+	font-size : 400%;
+	text-align: center;
+    margin: 0px;
+    padding: 0px 0px 0px 20px;
+    border: none;
+    
+}
+
+h2
+{
+    font-size: 1.5em;
+    font-weight: 600;
+    text-align: center;
+}
+
+h3
+{
+    font-size: 1.2em;
+}
+
+h4
+{
+    font-size: 1.1em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+/*#### Éléments primaires de présentation  ####*/
+.page
+{
+    width: 960px;
+    background-color: #fff;
+    margin: 20px auto 0px auto;
+    border: 1px solid silver;
+}
+
+.entete
+{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    background: linear-gradient(#606060, silver);
+    width: 100%;
+}
+
+.principal
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+ 
+}
+
+.pied
+{
+    color: silver;
+    padding: 8px 0px 0px 0px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: normal;
+}
+/*### Message Session ###*/
+.connexionSession
+{
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    padding: 10px;
+    color: White;
+}
+
+.connexionSession a:link
+{
+    color: white;
+}
+
+.connexionSession a:visited
+{
+    color: white;
+}
+
+.connexionSession a:hover
+{
+    color: white;
+}
+
+/*### Menu de Naviagtion ###*/
+div.fondDeMenu
+{
+    background-color:silver;
+    width:100%;
+}
+
+div.menuDeNavigation
+{
+    padding: 4px 0px 4px 8px;
+}
+
+div.menuDeNavigation ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+}
+
+div.menuDeNavigation ul li a, div.menuDeNavigation ul li a:visited
+{
+    background-color: #999999;
+    border: 1px #868686 solid;
+    color: #000000;
+    display: block;
+    line-height: 1.35em;
+    padding: 4px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+div.menuDeNavigation ul li a:hover
+{
+    background-color: #ececec;
+    color: #000000;
+    text-decoration: none;
+}
+
+div.menuDeNavigation ul li a:active
+{
+    background-color: #4c4c4c;
+    color: #000000;
+    text-decoration: none;
+}
+/*### Les Boutons ###*/
+.btn {
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 18px;
+  background: #3498db;
+  padding: 4px 12px 4px 12px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  text-decoration: none;
+}
+
+/*### Fieldset ###*/
+fieldset
+{
+    margin: 1em 0px;
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+fieldset p 
+{
+    margin: 2px 12px 10px 10px;
+}
+
+fieldset.connexion label, fieldset.infoEnregistrement label
+{
+    display: block;
+}
+
+fieldset label.inline 
+{
+    display: inline;
+}
+
+legend 
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input.entreeTexte 
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+input.entreeMotDePasse 
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+
+.notificationEchec
+{
+    font-size: 1.2em;
+    color: Red;
+}
+
+.img{
+    max-height: 100px;
+    max-width: 100px;
+    vertical-align : middle;
+  }
+
+.imgOuvrier {
+    float: left;
+    width:200px;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+.imgPersonnes {
+    Width:400px;
+    margin-left: 22%;
+}
