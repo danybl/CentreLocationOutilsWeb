@@ -21,6 +21,7 @@
                                      ValidationGroup="GroupeValidationEnregistrement">*</asp:RequiredFieldValidator>
                         <asp:RegularExpressionValidator runat="server" ValidationExpression="^[A-Za-z\s\-]+$" ControlToValidate="txtPrenom" 
                                     CssClass="notificationEchec" Display="Dynamic" ErrorMessage="Seules les lettres, les espaces et les tirets sont autorisés!"
+                                    ToolTip="Seules les lettres, les espaces et les tirets sont autorisés!"
                                     ValidationGroup="GroupeValidationEnregistrement">*</asp:RegularExpressionValidator>
                     </p>
  
@@ -32,6 +33,7 @@
                                      ValidationGroup="GroupeValidationEnregistrement">*</asp:RequiredFieldValidator>
                         <asp:RegularExpressionValidator runat="server" ValidationExpression="^[A-Za-z\s\-]+$" ControlToValidate="txtNom" 
                                     CssClass="notificationEchec" Display="Dynamic" ErrorMessage="Seules les lettres, les espaces et les tirets sont autorisés!"
+                                    ToolTip="Seules les lettres, les espaces et les tirets sont autorisés!"
                                     ValidationGroup="GroupeValidationEnregistrement">*</asp:RegularExpressionValidator>
                     </p>
 
@@ -51,6 +53,7 @@
                                      ValidationGroup="GroupeValidationEnregistrement">*</asp:RequiredFieldValidator>
                         <asp:CompareValidator ID="confirmationPasse" runat="server" ControlToCompare="txtMotDePasse" ControlToValidate="txtConfirmationMotDePasse" 
                                      CssClass="notificationEchec" Display="Dynamic" ErrorMessage="Les mots de passe ne correspondent pas."
+                                     ToolTip="Les mots de passe ne correspondent pas."
                                      ValidationGroup="GroupeValidationEnregistrement">*</asp:CompareValidator>
                     </p>
 
@@ -62,6 +65,7 @@
                                      ValidationGroup="GroupeValidationEnregistrement">*</asp:RequiredFieldValidator>
                         <asp:RegularExpressionValidator runat="server" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ControlToValidate="txtEmail" 
                                      CssClass="notificationEchec" Display="Dynamic" ErrorMessage="Email n'est pas valide !"
+                                     ToolTip="Email n'est pas valide !"
                                      ValidationGroup="GroupeValidationEnregistrement">*</asp:RegularExpressionValidator>
                                  
                     </p>
@@ -73,6 +77,7 @@
                                      ValidationGroup="GroupeValidationEnregistrement">*</asp:RequiredFieldValidator>
                         <asp:RegularExpressionValidator runat="server" ValidationExpression="^\d+$" ControlToValidate="txtNumeroRue" 
                                     CssClass="notificationEchec" Display="Dynamic" ErrorMessage="Seules les valeurs numériques sont autorisées!"
+                                    ToolTip="Seules les valeurs numériques sont autorisées!"
                                     ValidationGroup="GroupeValidationEnregistrement">*</asp:RegularExpressionValidator>
                     </p>
                     <p>
@@ -83,6 +88,7 @@
                                      ValidationGroup="GroupeValidationEnregistrement">*</asp:RequiredFieldValidator>
                         <asp:RegularExpressionValidator runat="server" ValidationExpression="^[\w\s\-]+$" ControlToValidate="txtRue" 
                                     CssClass="notificationEchec" Display="Dynamic" ErrorMessage="Seules les lettres, les espaces, les valeurs numériques et les tirets sont autorisés!"
+                                    ToolTip="Seules les lettres, les espaces, les valeurs numériques et les tirets sont autorisés!"
                                     ValidationGroup="GroupeValidationEnregistrement">*</asp:RegularExpressionValidator>
                     </p>
                     <p>
@@ -90,6 +96,7 @@
                         <asp:TextBox ID="txtAppartement" runat="server" CssClass="entreeTexte"></asp:TextBox>
                         <asp:RegularExpressionValidator runat="server" ValidationExpression="^[\w\s\-]+$" ControlToValidate="txtAppartement" 
                                     CssClass="notificationEchec" Display="Dynamic" ErrorMessage="Seules les lettres, les espaces, les valeurs numériques et les tirets sont autorisées!"
+                                    ToolTip="Seules les lettres, les espaces, les valeurs numériques et les tirets sont autorisées!"
                                     ValidationGroup="GroupeValidationEnregistrement">*</asp:RegularExpressionValidator>
                     </p>
                     <p>
@@ -100,6 +107,7 @@
                                      ValidationGroup="GroupeValidationEnregistrement">*</asp:RequiredFieldValidator>
                         <asp:RegularExpressionValidator runat="server" ValidationExpression="^[\w\s]+$" ControlToValidate="txtCodePostal" 
                                     CssClass="notificationEchec" Display="Dynamic" ErrorMessage="Seules les lettres, les espaces et les valeurs numériques sont autorisés!"
+                                    ToolTip="Seules les lettres, les espaces et les valeurs numériques sont autorisés!"
                                     ValidationGroup="GroupeValidationEnregistrement">*</asp:RegularExpressionValidator>
                     </p>
                     <p>
@@ -110,6 +118,7 @@
                                      ValidationGroup="GroupeValidationEnregistrement">*</asp:RequiredFieldValidator>
                         <asp:RegularExpressionValidator runat="server" ValidationExpression="^[A-Za-z\s\-]+$" ControlToValidate="txtVille" 
                                     CssClass="notificationEchec" Display="Dynamic" ErrorMessage="Seules les lettres, les espaces et les tirets sont autorisés!"
+                                    ToolTip="Seules les lettres, les espaces et les tirets sont autorisés!"
                                     ValidationGroup="GroupeValidationEnregistrement">*</asp:RegularExpressionValidator>
                     </p>
                     <p>
@@ -120,6 +129,7 @@
                                      ValidationGroup="GroupeValidationEnregistrement">*</asp:RequiredFieldValidator>
                         <asp:RegularExpressionValidator runat="server" ValidationExpression="^[A-Za-z\s\-]+$" ControlToValidate="txtProvince" 
                                     CssClass="notificationEchec" Display="Dynamic" ErrorMessage="Seules les lettres, les espaces et les tirets sont autorisés!"
+                                    ToolTip="Seules les lettres, les espaces et les tirets sont autorisés!"
                                     ValidationGroup="GroupeValidationEnregistrement">*</asp:RegularExpressionValidator>
                     </p>
                     <p>
@@ -130,6 +140,7 @@
                                      ValidationGroup="GroupeValidationEnregistrement">*</asp:RequiredFieldValidator>
                         <asp:RegularExpressionValidator runat="server" ValidationExpression="^[A-Za-z\s\-]+$" ControlToValidate="txtPays" 
                                     CssClass="notificationEchec" Display="Dynamic" ErrorMessage="Seules les lettres, les espaces et les tirets sont autorisés!"
+                                    ToolTip="Seules les lettres, les espaces et les tirets sont autorisés!"
                                     ValidationGroup="GroupeValidationEnregistrement">*</asp:RegularExpressionValidator>
                     </p>
                     <p>
@@ -140,8 +151,10 @@
                                      ValidationGroup="GroupeValidationEnregistrement">*</asp:RequiredFieldValidator>
                         <asp:RegularExpressionValidator runat="server" ValidationExpression="^\d\-+$" ControlToValidate="txtTelephone" 
                                     CssClass="notificationEchec" Display="Dynamic" ErrorMessage="Seules les valeurs numérique et les tirets sont autorisées!"
+                                    ToolTip="Seules les valeurs numérique et les tirets sont autorisées!"
                                     ValidationGroup="GroupeValidationEnregistrement">*</asp:RegularExpressionValidator>
                     </p>
+
 
                     <p>
                         <asp:Label ID="lblResultat" runat="server" Visible="False"></asp:Label>

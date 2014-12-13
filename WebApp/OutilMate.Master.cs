@@ -11,7 +11,20 @@ namespace WebApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Deconnexion.Visible = false;
 
+            if (Session["Nom_Usager"] != null)
+            {
+                Deconnexion.Visible = true;
+                string msg = "Bienvenue " + Session["Nom_Usager"].ToString();
+                inviteSession.InnerHtml = msg; 
+            }
+        }
+
+        protected void DeconnecterUtilisateur(object sender, EventArgs e)
+        {
+            Session["Nom_Usager"] = null;
+            Response.Redirect("~/Compte/Connexion.aspx");
         }
     }
 }

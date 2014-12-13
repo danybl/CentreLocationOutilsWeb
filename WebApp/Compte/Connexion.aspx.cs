@@ -18,8 +18,6 @@ namespace WebApp.Compte
 
         protected void btnConnexion_Click(object sender, EventArgs e)
         {
-            //LoginName nomClient = (LoginName)Master.FindControl("NomDeConnexion");
-
             OleDbConnection conn = null;
             OleDbDataReader dr = null;
             try
@@ -27,18 +25,15 @@ namespace WebApp.Compte
                 conn = new OleDbConnection("Provider=OraOLEDB.Oracle; Data Source=xe; User ID=test; Password=test; Unicode=True");
                 conn.Open();
 
-                OleDbCommand cmd = new OleDbCommand("Select nom FROM client where email='" + txtEmail.Text + "' and motDePasse='" + txtMotDePasse.Text + "'", conn);
+                OleDbCommand cmd = new OleDbCommand("Select * FROM client where email='" + txtEmail.Text + "' and motDePasse='" + txtMotDePasse.Text + "'", conn);
 
                 dr = cmd.ExecuteReader();
 
                 if (dr.Read())
                 {
-                    System.Diagnostics.Debug.WriteLine("Bonjour cher client ! ");
+                    System.Diagnostics.Debug.WriteLine("CLIENT : " + dr.GetValue(1));
+                    Session["Nom_Usager"] = dr.GetValue(1);
                     Response.Redirect("~/Commun/Accueil.aspx");
-                    //if (nomClient != null)
-                    //{
-                    //    nomClient
-                    //}
                 }
                 else
                 {
