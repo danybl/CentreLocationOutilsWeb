@@ -16,14 +16,16 @@ namespace WebApp
             if (Session["Nom_Usager"] != null)
             {
                 Deconnexion.Visible = true;
-                string msg = "Bienvenue " + Session["Nom_Usager"].ToString();
+                string msg = "Bienvenue " + Session["Nom_Usager"].ToString() + " [";
                 inviteSession.InnerHtml = msg; 
             }
         }
 
         protected void DeconnecterUtilisateur(object sender, EventArgs e)
         {
-            Session["Nom_Usager"] = null;
+            Session.Clear();
+            Session.RemoveAll();
+            Session.Abandon();
             Response.Redirect("~/Compte/Connexion.aspx");
         }
     }

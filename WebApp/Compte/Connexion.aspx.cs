@@ -32,7 +32,8 @@ namespace WebApp.Compte
                 if (dr.Read())
                 {
                     System.Diagnostics.Debug.WriteLine("CLIENT : " + dr.GetValue(1));
-                    Session["Nom_Usager"] = dr.GetValue(1);
+                    Session["Id_Client"] = dr.GetValue(0);
+                    Session["Nom_Usager"] = dr.GetValue(2);
                     Response.Redirect("~/Commun/Accueil.aspx");
                 }
                 else

@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/OutilMate.Master" AutoEventWireup="true" 
     CodeBehind="Panier.aspx.cs" Inherits="WebApp.Panier"  EnableEventValidation="false" %>
 <asp:Content ID="ContenuEntete" ContentPlaceHolderID="contenuEntete" runat="server">
+
 </asp:Content>
 <asp:Content ID="ContenuPrincipal" ContentPlaceHolderID="contenuPrincipal" runat="server">
     <p> 
@@ -24,9 +25,16 @@
                 </ItemTemplate>
                 <ItemStyle HorizontalAlign="Center" /> 
             </asp:TemplateField>
+<%--            <asp:TemplateField HeaderText="Date  de réservation">
+                <ItemTemplate>
+                    <asp:TextBox ID="txtDate" runat="server" ReadOnly = "true"></asp:TextBox>
+                    <img src="Calender.png" />
+                </ItemTemplate>
+                <ItemStyle HorizontalAlign="Center" /> 
+            </asp:TemplateField>--%>
             <asp:TemplateField HeaderText="Retirer du panier">
                 <ItemTemplate>
-                    <asp:Button ID="btnRetirer" CssClass="btn" runat="server" CausesValidation="false" CommandName="Ajouter"
+                    <asp:Button ID="btnRetirer" CssClass="btn" runat="server" CausesValidation="false" CommandName="Retirer"
                         Text="Retirer" CommandArgument='<%# Eval("idOutil") %>' />
                 </ItemTemplate>
                 <ItemStyle HorizontalAlign="Center" /> 
@@ -35,6 +43,7 @@
         <HeaderStyle HorizontalAlign="Center" BackColor="#C0C0C0" Font-Bold="True" ForeColor="#000000" /> 
         <FooterStyle HorizontalAlign="Center" BackColor="#C0C0C0" Font-Bold="True" ForeColor="#000000" />
      </asp:GridView> 
+        
    </p>
    <p class="btnReservation">
      <asp:Button CssClass="btn" ID="btnReservation" runat="server" CommandName="Reserver" 

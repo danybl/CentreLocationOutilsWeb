@@ -14,6 +14,8 @@ namespace WebApp
 {
     public partial class Outils : System.Web.UI.Page
     {
+        protected static List<int> articles = new List<int>();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -51,17 +53,22 @@ namespace WebApp
 
         protected void grilleOutils_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            List<int>  articles =  new List<int>();
-
             if (e.CommandName == "Ajouter")
             {
                 int idProduit = Convert.ToInt32(e.CommandArgument);
 
-                articles.Add(idProduit);
+                bool existeDeja = articles.Exists(outil => outil.Equals(idProduit));
+                if (!existeDeja)
+                {
+                    articles.Add(idProduit);
 
-                System.Diagnostics.Debug.WriteLine("Ajouter produit ID : " + idProduit);
+                    System.Diagnostics.Debug.WriteLine("Ajouter produit ID : " + idProduit);
+                    System.Diagnostics.Debug.WriteLine("Nombre d'articles : " + articles.Count);
+                    
+                    Session["outils"] = articles;
+                }
 
-                Session["outils"] = articles;
+                
             }
 
         }

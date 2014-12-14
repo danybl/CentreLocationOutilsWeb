@@ -69,6 +69,7 @@
     <Content Include="Commun\message.png" />
     <Content Include="lib\CentreLocationOutils.dll" />
     <Content Include="Panier.aspx" />
+    <Content Include="Ressources\Calender.png" />
     <Content Include="Ressources\ImagesOutils\brouette.jpg" />
     <Content Include="Ressources\ImagesOutils\Camera-d-inspection-MicroExplorer-Ridgid.jpg" />
     <Content Include="Ressources\ImagesOutils\chariot-pour-scie-a-beton.jpg" />
