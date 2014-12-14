@@ -15,8 +15,16 @@ namespace WebApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            int idOutil = Convert.ToInt32(Session["idOutil"]);
-            LierLesDonnees(idOutil);
+            List<int>  outils =  new List<int>();
+            outils = (List<int>) Session["outils"];
+
+            if (outils != null)
+            {
+                foreach (int idOutil in outils)
+                {
+                    LierLesDonnees(idOutil);
+                }
+            }
         }
 
         public void LierLesDonnees(int idOutil)
@@ -28,8 +36,7 @@ namespace WebApp
                 conn = new OleDbConnection("Provider=OraOLEDB.Oracle; Data Source=xe; User ID=test; Password=test; Unicode=True");
                 conn.Open();
 
-                OleDbCommand cmd =
-                    new OleDbCommand("Select * FROM Outil WHERE idOutil ='" + idOutil + "'", conn);
+                OleDbCommand cmd = new OleDbCommand("Select * FROM Outil WHERE idOutil ='" + idOutil + "'", conn);
                 reader = cmd.ExecuteReader();
 
                 grilleOutils.DataSource = reader;

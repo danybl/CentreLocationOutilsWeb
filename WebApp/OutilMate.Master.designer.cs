@@ -40,22 +40,22 @@ namespace WebApp {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl inviteSession;
         
         /// <summary>
-        /// A1 control.
+        /// SeConnecter control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor A1;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor SeConnecter;
         
         /// <summary>
-        /// A2 control.
+        /// SInscrire control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor A2;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor SInscrire;
         
         /// <summary>
         /// Deconnexion control.

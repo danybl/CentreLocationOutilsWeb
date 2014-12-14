@@ -51,13 +51,17 @@ namespace WebApp
 
         protected void grilleOutils_RowCommand(object sender, GridViewCommandEventArgs e)
         {
+            List<int>  articles =  new List<int>();
+
             if (e.CommandName == "Ajouter")
             {
-                int indiceDeLigne = Convert.ToInt32(e.CommandArgument);
+                int idProduit = Convert.ToInt32(e.CommandArgument);
 
-                Session["idOutil"] = e.CommandArgument;
+                articles.Add(idProduit);
 
-                System.Diagnostics.Debug.WriteLine("Ajouter produit ID : " + indiceDeLigne);
+                System.Diagnostics.Debug.WriteLine("Ajouter produit ID : " + idProduit);
+
+                Session["outils"] = articles;
             }
 
         }

@@ -26,10 +26,10 @@
             </div>
             <div class="connexionSession">
                 <span id="inviteSession" runat="server">
-                     [ <a href="~/Compte/Connexion.aspx" ID="A1" runat="server">Se connecter</a> ]
-                     [ <a href="~/Compte/Enregistrer.aspx" ID="A2" runat="server">S'inscrire</a> ]
+                     [ <a href="~/Compte/Connexion.aspx" ID="SeConnecter" runat="server">Se connecter</a> ]
+                     [ <a href="~/Compte/Enregistrer.aspx" ID="SInscrire" runat="server">S'inscrire</a> ]
                  </span>
-                 <asp:LinkButton ID="Deconnexion" Type="Hidden" Text="Se déconnecter" runat="server" OnClick="DeconnecterUtilisateur" />
+                 <asp:LinkButton ID="Deconnexion" Text="Se déconnecter" runat="server" OnClick="DeconnecterUtilisateur" />
             </div>
             <div class ="fondDeMenu">
                 <div class="menuDeNavigation">

@@ -24,9 +24,6 @@
                 </ItemTemplate>
                 <ItemStyle HorizontalAlign="Center" /> 
             </asp:TemplateField>
-     <%--       <asp:BoundField HeaderText="Date  de réservation"  dataformatstring="{0:dd/MM/yyyy}" > 
-                <ItemStyle HorizontalAlign="Center" />
-            </asp:BoundField>--%>
             <asp:TemplateField HeaderText="Retirer du panier">
                 <ItemTemplate>
                     <asp:Button ID="btnRetirer" CssClass="btn" runat="server" CausesValidation="false" CommandName="Ajouter"
