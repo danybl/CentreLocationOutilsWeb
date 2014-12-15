@@ -5,6 +5,7 @@
 </asp:Content>
 <asp:Content ID="ContenuPrincipal" ContentPlaceHolderID="contenuPrincipal" runat="server">
     <p> 
+        <asp:Label ID="lblMessage" runat="server" Visible="false" Text="Vous n'avez pas d'articles dans votre panier pour le moment."></asp:Label>
      <asp:GridView runat="server" id="grilleOutils" CellPadding="4" OnRowCommand="retirerOutil_RowCommand" AutoGenerateColumns="False" width="100%" > 
        <Columns>
             <asp:TemplateField HeaderText="Image">
@@ -46,7 +47,7 @@
         
    </p>
    <p class="btnReservation">
-     <asp:Button CssClass="btn" ID="btnReservation" runat="server" CommandName="Reserver" 
+     <asp:Button CssClass="btn" ID="btnReservation" runat="server" Visible="false" CommandName="Reserver" 
            Text="Réserver" OnClick="btnReservation_Click" />
    </p>
 </asp:Content>

@@ -32,10 +32,14 @@ namespace WebApp
 
             if (outils != null)
             {
+                btnReservation.Visible = true;
                 foreach (int idOutil in outils)
                 {
                     LierLesDonnees(idOutil);
                 }
+            }
+            else {
+                lblMessage.Visible = true;
             }
         }
         protected void LierLesDonnees(int idOutil)
