@@ -115,6 +115,44 @@ namespace WebApp
         protected void btnReservation_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Debug.WriteLine("#### btnReservation_Click ####");
+            List<int> outils = new List<int>();
+            outils = (List<int>)Session["outils"];
+            int idClient = (int)Session["Id_Client"];
+
+            if (outils != null)
+            {
+                foreach (int idOutil in outils)
+                {
+                    //placerReservation(idOutil, idClient,,);
+                }
+            }
+            else
+            {
+                lblMessage.Visible = true;
+            }
+        }
+
+        protected void placerReservation(int idclient, int idoutil, DateTime datereservation, DateTime datelimite)
+        {
+            OleDbConnection conn = null;
+
+            try
+            {
+                conn = new OleDbConnection("Provider=OraOLEDB.Oracle; Data Source=xe; User ID=test; Password=test; Unicode=True");
+                conn.Open();
+
+                OleDbCommand cmd = new OleDbCommand("INSERT INTO reservation VALUES ( seq_location_id.NEXTVAL," + idclient + "," + idoutil + "," + ConvertirEnTimestamp(datereservation) + "," + ConvertirEnTimestamp(datelimite) + ")", conn);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                Response.Write(e.Message);
+                Response.End();
+            }
+            finally
+            {
+                if (conn != null) conn.Close();
+            }
         }
 
         protected long ConvertirEnTimestamp(DateTime valeur)
