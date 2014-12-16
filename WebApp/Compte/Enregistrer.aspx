@@ -149,9 +149,9 @@
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="txtTelephone" 
                                      CssClass="notificationEchec" ErrorMessage="Le numéro de téléphone est requis." ToolTip="Le numéro de téléphone est requis." 
                                      ValidationGroup="GroupeValidationEnregistrement">*</asp:RequiredFieldValidator>
-                        <asp:RegularExpressionValidator runat="server" ValidationExpression="^\d\-+$" ControlToValidate="txtTelephone" 
-                                    CssClass="notificationEchec" Display="Dynamic" ErrorMessage="Seules les valeurs numérique et les tirets sont autorisées!"
-                                    ToolTip="Seules les valeurs numérique et les tirets sont autorisées!"
+                        <asp:RegularExpressionValidator runat="server" ValidationExpression="^\d+$" ControlToValidate="txtTelephone" 
+                                    CssClass="notificationEchec" Display="Dynamic" ErrorMessage="Seules les valeurs numérique sont autorisées!"
+                                    ToolTip="Seules les valeurs numérique sont autorisées!"
                                     ValidationGroup="GroupeValidationEnregistrement">*</asp:RegularExpressionValidator>
                     </p>
 
